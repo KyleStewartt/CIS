@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-15 11:32:36 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLURNR1RCMDM7MjAyMy0wMi0xNTsxMTowNDo0MCBBTTszMjk0"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLURNR1RCMDM7MjAyMy0wMi0xNTsxMTozMjozNiBBTTsyOzM0MDk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quanity" type="Integer" array="False" size=""/>
+            <declare name="unitPrice" type="Integer" array="False" size=""/>
+            <declare name="extendedPrice" type="Integer" array="False" size=""/>
+            <declare name="tax" type="Integer" array="False" size=""/>
+            <declare name="total" type="Integer" array="False" size=""/>
+            <input variable="quanity"/>
+            <if expression="quanity &gt;= 1000">
+                <then>
+                    <assign variable="unitPrice" expression="3"/>
+                </then>
+                <else>
+                    <assign variable="unitPrice" expression="5"/>
+                </else>
+            </if>
+            <assign variable="extendedPrice" expression="quanity * unitPrice"/>
+            <assign variable="tax" expression="extendedPrice * 0.07"/>
+            <assign variable="total" expression="extendedPrice + tax"/>
+            <output expression="&quot;Quanity ordered is &quot; &amp; quanity" newline="True"/>
+            <output expression="&quot;Unit price is $&quot; &amp; unitPrice" newline="True"/>
+            <output expression="&quot;Extended price is $&quot; &amp; extendedPrice" newline="True"/>
+            <output expression="&quot;Tax is $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total is $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

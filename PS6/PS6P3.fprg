@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-05 09:37:36 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlBQ1ZMOFU7MjAyMy0wMy0wNTswNzo0MTo1NCBBTTszMzQ4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlBQ1ZMOFU7MjAyMy0wMy0wNTswOTozNzozNiBBTTszOzM0NjU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="exam1" type="Real" array="False" size=""/>
+            <declare name="exam2" type="Real" array="False" size=""/>
+            <declare name="count" type="Real" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <declare name="continueProgram" type="String" array="False" size=""/>
+            <assign variable="count" expression="0"/>
+            <assign variable="continueProgram" expression="&quot;Yes&quot;"/>
+            <while expression="continueProgram = &quot;Yes&quot;">
+                <output expression="&quot;Do you want to enter data for a student? (Yes/No)&quot;" newline="True"/>
+                <input variable="continueProgram"/>
+                <if expression="continueProgram = &quot;Yes&quot;">
+                    <then>
+                        <input variable="lastName"/>
+                        <input variable="exam1"/>
+                        <input variable="exam2"/>
+                        <assign variable="average" expression="(exam1 + exam2) / 2"/>
+                        <output expression="&quot;Last name: &quot; &amp; lastName" newline="True"/>
+                        <output expression="&quot;Avergae exam score: &quot; &amp; average" newline="True"/>
+                        <assign variable="count" expression="count + 1"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+            <output expression="&quot;Number of students entered: &quot; &amp; count" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

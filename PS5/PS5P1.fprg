@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-21 04:01:40 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLVQyRlJFODI7MjAyMy0wMi0yMTswMjo1NTowNCBQTTszMzA4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLVQyRlJFODI7MjAyMy0wMi0yMTswNDowMTo0MCBQTTsyOzM0MTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="quanity" type="Real" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="extendedPrice" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <input variable="quanity"/>
+            <if expression="quanity&gt;10000">
+                <then>
+                    <assign variable="price" expression="10"/>
+                </then>
+                <else>
+                    <assign variable="price" expression="20"/>
+                </else>
+            </if>
+            <if expression="quanity&lt;5000">
+                <then>
+                    <assign variable="price" expression="30"/>
+                </then>
+                <else/>
+            </if>
+            <assign variable="extendedPrice" expression="quanity * price"/>
+            <assign variable="tax" expression="extendedPrice * 0.07"/>
+            <assign variable="total" expression="extendedPrice + tax"/>
+            <output expression="&quot;Extended price: $&quot; &amp; extendedPrice" newline="True"/>
+            <output expression="&quot;Tax amount: $&quot; &amp; tax" newline="True"/>
+            <output expression="&quot;Total: $&quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-02-01 06:10:46 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTZVSFVQVUQ7MjAyMy0wMi0wMTswNTozNDoyMSBQTTszMzcz"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTZVSFVQVUQ7MjAyMy0wMi0wMTswNjoxMDo0NiBQTTs1OzM0ODc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="make" type="String" array="False" size=""/>
+            <declare name="model" type="String" array="False" size=""/>
+            <declare name="mrsp" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="amountOffMrsp" type="Real" array="False" size=""/>
+            <declare name="discountedPrice" type="Real" array="False" size=""/>
+            <input variable="make"/>
+            <input variable="model"/>
+            <input variable="mrsp"/>
+            <input variable="discount"/>
+            <assign variable="amountOffMrsp" expression="mrsp * discount"/>
+            <assign variable="discountedPrice" expression="mrsp - amountOffMrsp"/>
+            <output expression="&quot;Make: &quot; &amp; make &amp; &quot; Model: &quot; &amp; model &amp; &quot; MRSP: &quot; &amp; mrsp &amp; &quot; Discount: &quot; &amp;  discount &amp; &quot; Amount off MRSP: &quot; &amp; amountOffMrsp &amp; &quot; Discounted Price: &quot; &amp;  discountedPrice" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

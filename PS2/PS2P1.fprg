@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-01-30 02:15:43 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTIwRjYzNzM7MjAyMy0wMS0zMDswMjowMjoxNyBQTTszMjIx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTIwRjYzNzM7MjAyMy0wMS0zMDswMjoxNTo0MyBQTTszOzMzMzQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="stockTickerSymbol" type="String" array="False" size=""/>
+            <declare name="numberOfShares" type="Real" array="False" size=""/>
+            <declare name="costPerShare" type="Real" array="False" size=""/>
+            <declare name="amountInvested" type="Integer" array="False" size=""/>
+            <input variable="stockTickerSymbol"/>
+            <input variable="numberOfShares"/>
+            <input variable="costPerShare"/>
+            <assign variable="amountInvested" expression="numberOfShares * costPerShare"/>
+            <output expression="&quot;Your amount invested is $&quot; &amp; amountInvested &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

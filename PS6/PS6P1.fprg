@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-05 08:05:40 AM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlBQ1ZMOFU7MjAyMy0wMy0wNTswNzo0MTo1NCBBTTszMzQ4"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLUlBQ1ZMOFU7MjAyMy0wMy0wNTswODowNTo0MCBBTTsxOzM0NTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <assign variable="number" expression="1"/>
+            <while expression="number &lt;= 25">
+                <output expression="number" newline="True"/>
+                <assign variable="number" expression="number + 2"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
