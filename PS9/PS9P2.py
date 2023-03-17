@@ -7,3 +7,4 @@ def battingAverage(hits, atbats):
     
 print(f"Last Name: {lastname}")
 print(f"Batting Average: {battingAverage(hits,atbats):.3f}")
+
