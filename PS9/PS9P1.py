@@ -11,3 +11,4 @@ def total(quantity, price):
 print(f"Quantity: {quantity}")
 print(f"Price: {price}")
 print(f"Total: {total(quantity,price):.3f}")
+
