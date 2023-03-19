@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-19 05:36:30 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTU2VDlKSU47MjAyMy0wMy0xOTswMjoxMDoyNCBQTTszMzIx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTU2VDlKSU47MjAyMy0wMy0xOTswNTozNjozMCBQTTsxMDszNDg1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="destinationCity" type="String" array="False" size=""/>
+            <declare name="milesTravelled" type="Real" array="False" size=""/>
+            <declare name="gallonsUsed" type="Real" array="False" size=""/>
+            <declare name="milesPerGallon" type="Real" array="False" size=""/>
+            <declare name="costOfGas" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter the destination city:&quot;" newline="True"/>
+            <input variable="destinationCity"/>
+            <output expression="&quot;Enter the miles travelled:&quot;" newline="True"/>
+            <input variable="milesTravelled"/>
+            <output expression="&quot;Enter the gallons used:&quot;" newline="True"/>
+            <input variable="gallonsUsed"/>
+            <assign variable="milesPerGallon" expression="computeMilesPerGallon(milesTravelled, gallonsUsed)"/>
+            <assign variable="costOfGas" expression="computeCost(gallonsUsed)"/>
+            <output expression="&quot;Destination City: &quot; &amp; destinationCity" newline="True"/>
+            <output expression="&quot;Miles Travelled: &quot; &amp; milesTravelled" newline="True"/>
+            <output expression="&quot;Cost of Gas: $&quot; &amp; costOfGas" newline="True"/>
+        </body>
+    </function>
+    <function name="computeCost" type="Real" variable="costOfGas">
+        <parameters>
+            <parameter name="inputGallonsUsed" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="costOfGas" type="Real" array="False" size=""/>
+            <assign variable="costOfGas" expression="inputGallonsUsed * 2.50"/>
+        </body>
+    </function>
+    <function name="computeMilesPerGallon" type="Real" variable="milesPerGallon">
+        <parameters>
+            <parameter name="inputMilesTravelled" type="Real" array="False"/>
+            <parameter name="inputGallonsUsed" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="milesPerGallon" type="Real" array="False" size=""/>
+            <assign variable="milesPerGallon" expression="inputMilesTravelled / inputGallonsUsed"/>
+        </body>
+    </function>
+</flowgorithm>

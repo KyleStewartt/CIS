@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="PhotonUser"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2023-03-19 03:53:38 PM"/>
+        <attribute name="created" value="UGhvdG9uVXNlcjtFQzJBTUFaLTU2VDlKSU47MjAyMy0wMy0xOTswMjoxMDoyNCBQTTszMzIx"/>
+        <attribute name="edited" value="UGhvdG9uVXNlcjtFQzJBTUFaLTU2VDlKSU47MjAyMy0wMy0xOTswMzo1MzozOCBQTTszOzM0NDQ="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="numberOfHits" type="Integer" array="False" size=""/>
+            <declare name="numberOfAtBats" type="Integer" array="False" size=""/>
+            <declare name="battingAverage" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter player's last name:&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;Enter the number of hits:&quot;" newline="True"/>
+            <input variable="numberOfHits"/>
+            <output expression="&quot;Enter the number of at-bats:&quot;" newline="True"/>
+            <input variable="numberOfAtBats"/>
+            <assign variable="battingAverage" expression="computeBattingAverage(numberOfHits, numberOfAtBats)"/>
+            <output expression="lastName &amp; &quot;'s batting average:&quot;" newline="True"/>
+            <output expression="battingAverage" newline="True"/>
+        </body>
+    </function>
+    <function name="computeBattingAverage" type="Real" variable="battingAverage">
+        <parameters>
+            <parameter name="inputHits" type="Integer" array="False"/>
+            <parameter name="inputAtBats" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="battingAverage" type="Real" array="False" size=""/>
+            <assign variable="battingAverage" expression="inputHits / inputAtBats"/>
+        </body>
+    </function>
+</flowgorithm>
